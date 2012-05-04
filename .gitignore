@@ -18,7 +18,9 @@ Thumbs.db
 *.ilk
 *.log
 [Bb]in
-*.dll
+[Bb]in/Telerik.Web.UI.dll
+[Bb]in/Telerik.Web.UI.Skins.dll
+[Bb]in/Telerik.Web.UI.xml
 [Dd]ebug*/
 *.lib
 *.sbr
