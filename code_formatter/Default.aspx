@@ -5,6 +5,9 @@
 <head runat="server">
 	<title></title>
 	<telerik:RadStyleSheetManager ID="RadStyleSheetManager1" runat="server" />
+	<link rel="stylesheet" type="text/css">
+	.widthheight{ width: 100%; height: 100%; }
+	</link>
 </head>
 <body>
 	<form id="form1" runat="server">
@@ -23,21 +26,33 @@
 	<telerik:RadAjaxManager ID="RadAjaxManager1" runat="server">
 	</telerik:RadAjaxManager>
 	<div>
-		<telerik:RadAjaxPanel ID="RadAjaxPanel1" runat="server" EnableHistory="True" Height="100%"
+		<telerik:RadAjaxPanel ID="RadAjaxPanel1" runat="server" EnableHistory="True" Height="600px"
 			HorizontalAlign="NotSet" Width="100%">
-			<telerik:RadTabStrip ID="RadTabStrip1" runat="server" MultiPageID="RadMultiPage1"
-				SelectedIndex="0">
-				<Tabs>
-					<telerik:RadTab runat="server" PageViewID="RadPageView1" Selected="True" Text="Root RadTab1">
-					</telerik:RadTab>
-				</Tabs>
-			</telerik:RadTabStrip>
-			<telerik:RadMultiPage ID="RadMultiPage1" runat="server" SelectedIndex="0">
-				<telerik:RadPageView ID="RadPageView1" runat="server" Selected="True">
-					<telerik:RadEditor ID="RadEditor1" runat="server" Width="100%">
-					</telerik:RadEditor>
-				</telerik:RadPageView>
-			</telerik:RadMultiPage>
+			<telerik:RadSplitter ID="RadSplitter1" Runat="server" Height="100%" 
+				Orientation="Horizontal" Width="100%">
+				<telerik:RadPane ID="RadPane1" Runat="server" Height="30px">
+					<telerik:RadTabStrip ID="RadTabStrip1" runat="server" Height="30px" 
+						MultiPageID="RadMultiPage1" SelectedIndex="0" Width="100%">
+						<Tabs>
+							<telerik:RadTab runat="server" PageViewID="RadPageView1" Selected="True" 
+								Text="Root RadTab1">
+							</telerik:RadTab>
+						</Tabs>
+					</telerik:RadTabStrip>
+					<br />
+				</telerik:RadPane>
+				<telerik:RadPane ID="RadPane2" Runat="server" CssClass="widthheight" 
+					MinWidth="400">
+					<telerik:RadMultiPage ID="RadMultiPage1" runat="server" Height="100%" 
+						SelectedIndex="0" Width="100%">
+						<telerik:RadPageView ID="RadPageView1" runat="server" Height="100%" 
+							Selected="True" Width="100%">
+							<telerik:RadEditor ID="RadEditor1" runat="server" Width="100%">
+							</telerik:RadEditor>
+						</telerik:RadPageView>
+					</telerik:RadMultiPage>
+				</telerik:RadPane>
+			</telerik:RadSplitter>
 		</telerik:RadAjaxPanel>
 	</div>
 	</form>
