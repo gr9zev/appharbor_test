@@ -5,9 +5,11 @@
 <head runat="server">
 	<title></title>
 	<telerik:RadStyleSheetManager ID="RadStyleSheetManager1" runat="server" />
-	<link rel="stylesheet" type="text/css">
-	.widthheight{ width: 100%; height: 100%; }
-	</link>
+	<style type="text/css">
+		.widthheight {
+			 width: 100%; height: 100%;
+		}		
+	</style>
 </head>
 <body>
 	<form id="form1" runat="server">
